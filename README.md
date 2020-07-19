@@ -1,3 +1,6 @@
 # Code challenges I have solved
 
-firstNotRepeatingCharacter - CodeSignal | interview prep | arrays
+firstNotRepeatingCharacter (Swift) - CodeSignal | interview prep | arrays
+balancedBrackets (Swift) - HackerRank
+findfirstnonrepeatingcharacter (Python) - YouTube
+operators (Swift) - HackerRank | 30-Days of Code
