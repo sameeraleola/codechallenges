@@ -1,2 +1,3 @@
 # Code challenges I have solved
-Code challenges found/solved
+
+firstNotRepeatingCharacter - CodeSignal | interview prep | arrays
