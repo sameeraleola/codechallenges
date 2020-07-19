@@ -1,2 +1,2 @@
 # codeachallenges
-Code challenges found/solvedf
+Code challenges found/solved
