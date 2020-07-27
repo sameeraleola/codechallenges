@@ -4,7 +4,7 @@ func foldArray(_ arr: [Int], times: Int) -> [Int] {
     var foldedArray: [Int] = []
     var array = arr
     var t = times
-    print(arr.count)
+
     if arr.count == 1 {
         foldedArray.append(contentsOf: arr)
         return foldedArray
