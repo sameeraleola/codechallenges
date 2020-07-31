@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,macos,carthage,cocoapods,python,visualstudio,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,macos,carthage,cocoapods,python,visualstudio,visualstudiocode
 
+# Don't push the resources file up.
+resources
+
 ### Carthage ###
 # Carthage
 #
