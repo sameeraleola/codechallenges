@@ -1,16 +1,13 @@
 import UIKit
 
 func commonCharacterCount(s1: String, s2: String) -> Int {
-    var s1Chars = Array(s1)
     var s2Chars = Array(s2)
-
     var commonCount = 0
     
-    for c in s1Chars {
+    for c in s1 {
         if let i = s2Chars.firstIndex(of: c) {
             commonCount += 1
             s2Chars.remove(at: i)
-            s1Chars.removeFirst()
         }
     }
     return commonCount
