@@ -12,3 +12,4 @@ func firstNotRepeatingCharacter(s: String) -> Character {
 
 print(firstNotRepeatingCharacter(s: "abacabad"))
 print(firstNotRepeatingCharacter(s: "bcb"))
+print(firstNotRepeatingCharacter(s: "abacabaabacaba"))
