@@ -26,16 +26,16 @@ import UIKit
 
 // Try this
 
-func rotateImage2( a: inout [[Int]]) -> [[Int]] {
-   // var img = a
+func rotateImage( a: [[Int]]) -> [[Int]] {
+    var img = a
     let index = a.count - 1
 
     for r in 0 ... index {
         for c in r  ... index {
             if c != r {
-                a[c][r] += a[r][c]
-                a[r][c] = a[c][r] - a[r][c]
-                a[c][r] = a[c][r] - a[r][c]
+                img[c][r] += img[r][c]
+                img[r][c] = img[c][r] - img[r][c]
+                img[c][r] = img[c][r] - img[r][c]
             }
         }
     }
@@ -45,6 +45,7 @@ func rotateImage2( a: inout [[Int]]) -> [[Int]] {
 
 //    func rotateImage(a: [[Int]]) -> [[Int]] {
 //        var arr = a
+//        print(a.count)
 //        for x in 0..<a.count {
 //            for y in 0..<a[0].count {
 //                arr[x][y] = a[a.count - 1 - y][x]
@@ -54,7 +55,7 @@ func rotateImage2( a: inout [[Int]]) -> [[Int]] {
 //    }
 
 
-print(rotateImage2(a: &[[1,2,3], [4,5,6], [7,8,9]]))
+print(rotateImage(a: [[1,2,3], [4,5,6], [7,8,9]]))
 
 
 
