@@ -83,10 +83,48 @@ Tree Path Sum
      }
  }
 
+func hasPathWithGivenSum(t: Tree<Int>?, s: Int) -> (Any, Any) {
+      ((t?.s), (t?.s ?? []).contains(s))
+      
+}
+
+extension Tree where T == Int {
+    var s: [Int] { left == nil && right == nil ? [value] : ((left?.s ?? []) + (right?.s ?? [])).map { $0 + value } }}
+
 // 1. Create the nodes that will be stored in the binary tree
 let ten = Tree(10)
-let sixteen = Tree(16)
-let minusthree = Tree(-3)
-let five = Tree(5)
+let nine = Tree(9)
+let eight = Tree(8)
+let seven = Tree(7)
 let six = Tree(6)
+let five = Tree(5)
+let four = Tree(4)
+let three = Tree(3)
+let two = Tree(2)
+let one = Tree(1)
+let zero = Tree(0)
+
+let sixteen = Tree(16)
 let eleven = Tree(11)
+let minusfour = Tree(-4)
+let minusthree = Tree(-3)
+let minustwo = Tree(-2)
+
+// 2.  Build the tree.
+// --- left side
+four.left = one
+one.left = minustwo
+two.left = nil
+two.right = three
+three.left = nil
+three.right = nil
+// --- right side
+four.right = three
+three.left = one
+three.right = two
+two.left = minustwo
+//two.right = minusthree
+two.right = minusfour
+
+
+print(hasPathWithGivenSum(t: four, s: 5))
