@@ -82,3 +82,11 @@ Tree Path Sum
          self.right = nil
      }
  }
+
+// 1. Create the nodes that will be stored in the binary tree
+let ten = Tree(10)
+let sixteen = Tree(16)
+let minusthree = Tree(-3)
+let five = Tree(5)
+let six = Tree(6)
+let eleven = Tree(11)
