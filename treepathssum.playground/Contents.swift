@@ -83,8 +83,8 @@ Tree Path Sum
      }
  }
 
-func hasPathWithGivenSum(t: Tree<Int>?, s: Int) -> (Any, Any) {
-      ((t?.s), (t?.s ?? []).contains(s))
+func hasPathWithGivenSum(t: Tree<Int>?, s: Int) -> (Any, Any, Any, Any) {
+    ((t?.left?.value), (t?.right?.value), (t?.s), (t?.s ?? []))
       
 }
 
