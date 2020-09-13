@@ -1,4 +1,14 @@
 import UIKit
+/*
+ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem
+ https://itnext.io/linkedlist-in-swift-code-a-linkedlist-data-structure-in-swift-playgrounds-97fe2ed9b8f1
+ https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=recursion-backtracking
+ https://leetcode.com/explore/learn/card/recursion-i/250/principle-of-recursion/
+ https://www.raywenderlich.com/947-swift-algorithm-club-swift-linked-list-data-structure
+ https://www.youtube.com/watch?v=cd7Yio-D7qM&ab_channel=LambdaSchool
+ https://www.enekoalonso.com/projects/99-swift-problems/#arithmetic
+ */
 
 //Definition for singly-linked list.
  public class ListNode {
@@ -7,10 +17,6 @@ import UIKit
      public init() { self.val = 0; self.next = nil; }
      public init(_ val: Int) { self.val = val; self.next = nil; }
      public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
-    
-    func printList() {
-        print("Hello world!")
-    }
  }
 
 // Build out the singly linked list one node at a time!
