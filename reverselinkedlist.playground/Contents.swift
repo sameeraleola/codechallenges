@@ -22,12 +22,13 @@ import UIKit
 
 // Build out the singly linked list one node at a time!
 
-let list = ListNode(1)
+    let list = ListNode(1)
 
 func reverseList(a: ListNode<Int>?) -> ListNode<Int>? {
     // Set up the singly linked list
-    let head : ListNode<Int> = list
-
+    var linkedList : [Int] = []
+    var head : ListNode<Int> = list
+    
     head.next = ListNode(5)
     head.next.self?.next = ListNode(3)
     head.next?.next.self?.next = ListNode(9)
@@ -36,13 +37,22 @@ func reverseList(a: ListNode<Int>?) -> ListNode<Int>? {
     var prev : ListNode<Int>?
     
     while true {
-        guard let next_node = head.next else { return head }
-        head.next = prev
-        prev = head
-        return head
+        guard let new_head = head.next else { break }
+        let new_next = new_head.next
+        print("head = \(head.value) :: new_head = \(new_head.value) :: new_next = \(new_next?.value)")
+        break
+//        head.next = prev
+//        prev = head
+//        head = next_node
+//        let new_next = head.next
+//        linkedList.append(head.value)
+//        head.next = new_next?.next
+//        print("head.value = \(head.value)")
+//        print("head.next = \(head.next?.value)")
     }
     
-
+    print("The reversed linked list: \(linkedList)")
+    
     return head
 }
 
