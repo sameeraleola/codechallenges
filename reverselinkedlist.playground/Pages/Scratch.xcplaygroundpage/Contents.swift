@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 import UIKit
 
 /*
@@ -58,3 +60,6 @@ func reverseList(a: ListNode<Int>?) -> ListNode<Int>? {
 
 print(reverseList(a: list)?.value ?? -1)
 
+
+
+//: [Next](@next)
