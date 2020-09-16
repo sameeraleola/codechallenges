@@ -53,31 +53,16 @@ func reverseList(head : Node?) -> Node? {
     
     while currNode != nil {
         string = string + (currNode?.value ?? "")
-        print("**Begin**\nThe currNode = \(currNode?.value ?? "")")
-        print("The currNode.next node points to = \(currNode?.next?.value ??  "")\n-------------------------- \n")
         next = currNode?.next
         currNode?.next = prev
         prev = currNode
         currNode = next
     }
-    let linkedListString = "\(string)"
-//    print("The linked list string = " +linkedListString.reversed))
-//    print(linkedListString.reversed())
-    for char in linkedListString.reversed() {
-        reversedString = reversedString + String(char)
-    }
-    print(linkedListString + "\n" + reversedString)
-    
-    if linkedListString == reversedString {
-        print("True")
-    } else {
-        print("False")
-    }
-//    print(linkedListString == reversedString ? true : false)
     return prev
 }
 
 
 
 printList(head : h, message : "The starting list:" )
+print("\n")
 printList(head : reverseList(head : h), message : "The reversed list:" )
