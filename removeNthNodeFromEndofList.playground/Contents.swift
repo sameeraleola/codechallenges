@@ -26,8 +26,10 @@ head.next = ListNode(2)
 head.next?.self.next = ListNode(3)
 head.next?.next?.self.next = ListNode(4)
 head.next?.next?.next?.self.next = ListNode(5)
-//head.next?.next?.next?.next?.self.next = ListNode(6)
-//head.next?.next?.next?.next?.next?.self.next = ListNode(7)
+head.next?.next?.next?.next?.self.next = ListNode(6)
+head.next?.next?.next?.next?.next?.self.next = ListNode(7)
+
+print(head.val)
 
 //print(head.val, head.next?.val ?? -1, head.next?.next?.val ?? -1, head.next?.next?.next?.val ?? -1, head.next?.next?.next?.next?.val ?? -1,
 //      head.next?.next?.next?.next?.next?.val ?? -1, head.next?.next?.next?.next?.next?.next?.val ?? -1)
@@ -37,6 +39,7 @@ func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
     let head = list
     
     var nodeCount = 0
+    var atNode = 0
     var currNode : ListNode? = head
     
     while (currNode != nil) {
@@ -49,9 +52,11 @@ func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
 
     currNode = head
     
-    while (currNode < nodeCount) {
+    
+    while (atNode < nodeCount) {
         print("The current node contains: \(currNode?.val ?? -1)")
         currNode = currNode?.next
+        atNode += 1
     }
     
     return head
@@ -60,29 +65,5 @@ func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
 //print("\(removeNthFromEnd(list, 0)?.val ?? -1)")
 print("The value in the first node is \(removeNthFromEnd(list, 2)?.val ?? -1)")
 
-
-////func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> Int {
-//
-//    var nodeCount = 0
-//
-//    // If the list is empty return
-//    guard let currNode = head else { print("I'm returning"); return head }
-//    print(currNode.val)
-////    guard let currNode = head else { return 0 }
-//
-//    // Count the nodes
-//    while currNode.next != nil {
-//        print("Start counting nodes")
-//        nodeCount += 1
-//         //= currNode.next
-//        print("Counting nodes")
-//    }
-//
-//    // Go to the node to be removed
-//
-//    // Check if we are removing the head
-//    print("nodeCount = \(nodeCount)")
-//    return head
-//}
 
 
