@@ -29,41 +29,55 @@ head.next?.next?.next?.self.next = ListNode(5)
 head.next?.next?.next?.next?.self.next = ListNode(6)
 head.next?.next?.next?.next?.next?.self.next = ListNode(7)
 
-print(head.val)
+var currNode : ListNode? = head
+var ptr = "->"
 
-//print(head.val, head.next?.val ?? -1, head.next?.next?.val ?? -1, head.next?.next?.next?.val ?? -1, head.next?.next?.next?.next?.val ?? -1,
-//      head.next?.next?.next?.next?.next?.val ?? -1, head.next?.next?.next?.next?.next?.next?.val ?? -1)
+while (currNode != nil) {
+    print("\(currNode?.val ?? -1)->", terminator: "")
+    currNode = currNode?.next
+}
+print("nil")
 
 func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
 //func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> Int? {
-    let head = list
-    
+    var head = list
+    currNode = head
     var nodeCount = 0
     var atNode = 0
-    var currNode : ListNode? = head
-    
+
+    // Count the nodes
     while (currNode != nil) {
         nodeCount += 1
         currNode = currNode?.next
     }
-    
-    print("Delete node \(n)")
-    print("The value of the node \(n) from the end is \(nodeCount - 2)")
-
     currNode = head
+    nodeCount -= 1
     
+    // Determine which node to update for the delete
+    let targetNode = nodeCount - n
+    print(targetNode)
     
     while (atNode < nodeCount) {
-        print("The current node contains: \(currNode?.val ?? -1)")
-        currNode = currNode?.next
+        if n == 0 && (atNode == targetNode - 1) {
+            currNode?.next = currNode?.next?.next
+            break
+        } else {
+            currNode = currNode?.next
+        }
         atNode += 1
     }
+    
+    currNode = head
+    while (currNode != nil) {
+        print("\(currNode?.val ?? -1)->", terminator: "")
+        currNode = currNode?.next
+    }
+    print("nil")
     
     return head
 }
 
-//print("\(removeNthFromEnd(list, 0)?.val ?? -1)")
-print("The value in the first node is \(removeNthFromEnd(list, 2)?.val ?? -1)")
+removeNthFromEnd(list, 0)
 
 
 
