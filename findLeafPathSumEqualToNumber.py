@@ -21,10 +21,12 @@ and check to see if the sum is 0 when you run out of tree.
 def hasPathSum(node, s): 
 	
 	# Return true if we run out of tree and s = 0 
+	#  If the tree is empty we retrun true
 	if node is None: 
 		return (s == 0) 
 
 	else: 
+        # Start with our answer as true
 		ans = 0
 		
 		# Otherwise check both subtrees 

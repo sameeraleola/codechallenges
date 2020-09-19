@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 import UIKit
 
 /*
@@ -64,12 +66,11 @@ Tree Path Sum
  }
  
  The tree:           The sum:
-         10               26
+         xx               xx
        /    \
-      16      5
-     /       /  \
-   -3       6   11
- */
+      x      x
+     / \    / \
+   x    x  x   x
 
 // Define the binary tree class
  public class Tree<T> {
@@ -128,3 +129,7 @@ two.right = minusfour
 
 
 print(hasPathWithGivenSum(t: four, s: 5))
+
+
+
+//: [Next](@next)
