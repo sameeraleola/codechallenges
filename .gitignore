@@ -584,5 +584,6 @@ MigrationBackup/
 
 # Skip Zip files
 *.zip
+todo.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos,carthage,cocoapods,python,visualstudio,visualstudiocode

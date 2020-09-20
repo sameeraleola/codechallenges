@@ -1,9 +1,9 @@
 
-Balanced Brackets - Stacks & Queues
+Balanced Brackets - Stacks & Queues (Done)
 https://www.hackerrank.com/challenges/balanced-brackets/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=stacks-queues
 
 
-Left Rotation - Arrays
+Left Rotation - Arrays (Done)
 https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
 
 
@@ -27,7 +27,7 @@ Three Sum - Arrays/Lists
 https://leetcode.com/problems/3sum/
 
 
-Search Insert Position - Binary Search
+Search Insert Position - Binary Search (Done)
 https://leetcode.com/problems/search-insert-position/
 
 
