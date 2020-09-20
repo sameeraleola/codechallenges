@@ -1,10 +1,28 @@
 
-Balanced Brackets - Stacks & Queues (Done)
-https://www.hackerrank.com/challenges/balanced-brackets/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=stacks-queues
+biggeriisgreater
+
+condenselinklist
+
+findLeafPathSumEqualToNumber
+
+findsubstringsinstring
+
+increasing-order-search-tree
+
+removeDuplicatesfromUnorderedList
+
+removekfromlist
+
+reverselinkedlist
+
+rotatei=Image
+rotateimage.py
+
+sumofallpathstoleaf
+treepathssum
 
 
-Left Rotation - Arrays (Done)
-https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+------------------------------
 
 
 Insert a Node at a Specific Position in a linked list
@@ -15,21 +33,12 @@ Insert a Node Into a Sorted Doubly Linked List
 https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=linked-lists
 
 
-Remove Nth Node From End of List - Singly Linked List
-https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-
-
 Two Sum - Arrays/ Lists
 https://leetcode.com/problems/two-sum/
 
 
 Three Sum - Arrays/Lists
 https://leetcode.com/problems/3sum/
-
-
-Search Insert Position - Binary Search (Done)
-https://leetcode.com/problems/search-insert-position/
-
 
 Find the Duplicate Number
 https://leetcode.com/problems/find-the-duplicate-number/
@@ -57,3 +66,22 @@ https://leetcode.com/explore/learn/card/queue-stack/
 
 Word Ladder
 https://leetcode.com/problems/word-ladder/
+
+
+------------------------------
+
+
+Balanced Brackets - Stacks & Queues (Done)
+https://www.hackerrank.com/challenges/balanced-brackets/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=stacks-queues
+
+
+Left Rotation - Arrays (Done)
+https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays
+
+
+Remove Nth Node From End of List - Singly Linked List (Done)
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+
+Search Insert Position - Binary Search (Done)
+https://leetcode.com/problems/search-insert-position/
