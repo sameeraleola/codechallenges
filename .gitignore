@@ -4,6 +4,7 @@
 
 # Don't push the resources file up.
 resources
+todo.txt
 
 ### Carthage ###
 # Carthage
@@ -17,7 +18,7 @@ Carthage/Build
 ## CocoaPods GitIgnore Template
 
 # CocoaPods - Only use to conserve bandwidth / Save time on Pushing
-#           - Also handy if you have a large number of dependant pods
+#           - Also handy if you have a large number of dependent pods
 #           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
 Pods/
 
@@ -584,6 +585,5 @@ MigrationBackup/
 
 # Skip Zip files
 *.zip
-todo.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos,carthage,cocoapods,python,visualstudio,visualstudiocode
