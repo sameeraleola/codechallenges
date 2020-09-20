@@ -27,9 +27,5 @@ import UIKit
  }
  */
 
-//func countOccurancesOfSubstring() {
-//    let str = "JavaExamplesJavaCodeJavaProgram"
-var str = "Hello, playground"
 
-var index = str.firstIndex(of: ",")
-print(str[index])
+
