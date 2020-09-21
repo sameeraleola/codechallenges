@@ -3,12 +3,7 @@ import UIKit
 /*
  This is in Java
  https://www.javacodeexamples.com/java-count-occurrences-of-substring-in-string-example/724
- 
- startIndex = index of the first character
- endIndex = index after the last character
- after = index of the character after the given index
- before = index of the character before the given index
- 
+
  package com.javacodeexamples.stringexamples;
   
  public class CountOccurrencesOfSubstringExample {
@@ -25,6 +20,15 @@ import UIKit
          System.out.println("Total occurrences: " + count);
      }
  }
+ 
+ ====
+ 
+ Swift substring methods:
+ startIndex = index of the first character
+ endIndex = index after the last character
+ after = index of the character after the given index
+ before = index of the character before the given index
+ 
  */
 
 
