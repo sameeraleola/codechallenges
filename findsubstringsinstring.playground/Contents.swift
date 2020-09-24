@@ -29,7 +29,16 @@ import UIKit
  after = index of the character after the given index
  before = index of the character before the given index
  
+ https://rosettacode.org/wiki/Count_occurrences_of_a_substring#Swift
+ .components
+ 
  */
 
+func countSubstring(str: String, substring: String) -> Int {
+    return str.components(separatedBy: substring).count - 1
+}
+
+print(countSubstring(str: "the three truths", substring: "th"))
+print(countSubstring(str: "ababababab", substring: "abab"))
 
 
