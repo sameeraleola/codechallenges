@@ -60,11 +60,62 @@ func inorderTraversal(_ root: TreeNode?) -> [Int] {
     one.traverseInOrder {
         nodeValues.append($0)
     }
-    
     return nodeValues
 }
 
 print(inorderTraversal(one))  // Input: root = [1,null,2,3]  Output: [1,3,2]
 
+// https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/835812/Swift-recursion-2-lines
+func inorderTraversal2(_ root: TreeNode?) -> [Int] {
+    // Unwrap the root first
+    guard let root = root else { return [] }
+    
+    return inorderTraversal2(root.left) + [root.val] + inorderTraversal2(root.right)
+}
+
+print(inorderTraversal2(one))  // Input: root = [1,null,2,3]  Output: [1,3,2]
+
+/*
+ Iterative solution
+ https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/835861/Swift-iteration-concise-solution
+ */
+func inorderTraversal3(_ root: TreeNode?) -> [Int] {
+    var res: [Int] = []
+    var stack: [TreeNode] = []
+    var curr = root
+
+    while curr != nil || !stack.isEmpty {
+        while curr != nil {
+            stack.append(curr!)
+            curr = curr!.left
+        }
+
+        curr = stack.popLast()
+        res.append(curr!.val)
+        curr = curr?.right
+    }
+
+    return res
+}
+
+print(inorderTraversal3(one))  // Input: root = [1,null,2,3]  Output: [1,3,2]
+
+/*
+ Without an extension
+ https://leetcode.com/problems/binary-tree-inorder-traversal/discuss/813104/Swift%3A-SIMPLE-and-SWEET-recursive-and-iterative-100
+ */
+func inorderTraversal4(_ root: TreeNode?) -> [Int] {
+    // Unwrap the root first
+    guard let root = root else { return [] }
+    var result = [Int]()
+
+    result += inorderTraversal4(root.left)
+    result.append(root.val)
+    result += inorderTraversal4(root.right)
+
+    return result
+}
+
+print(inorderTraversal4(one))  // Input: root = [1,null,2,3]  Output: [1,3,2]
 
 
