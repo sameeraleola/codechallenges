@@ -17,8 +17,15 @@ import UIKit
  */
 
 func freqQuery(queries: [[Int]]) -> [Int] {
+
+    
     var output = [Int]()
     var dict = [Int:Int]()
+    
+    if queries.isEmpty {
+        return [0]
+        print("The query is empty")
+    }
     
     // Iterate
     queries.forEach {
@@ -47,7 +54,8 @@ func freqQuery(queries: [[Int]]) -> [Int] {
     return output
 }
 
-print(freqQuery(queries: [[1,5], [1,6], [3,2], [1,10], [1,10], [1,6], [2,5], [3,2]]))
+//print(freqQuery(queries: [[1,5], [1,6], [3,2], [1,10], [1,10], [1,6], [2,5], [3,2]]))
+print(freqQuery(queries: [[]]))
 
 /* SUBMISSION
 var output = [Int]()
@@ -72,4 +80,71 @@ queries.forEach {
 }
 return output
 
+ */
+
+
+/*
+ var output = [Int]()
+     var structure = [Int : Int]()
+     for query in queries {
+         let key = query[1]
+         switch query[0] {
+         case 1:
+             if let value = structure[key] {
+                 structure[key] = value + 1
+             } else {
+                 structure[key] = 1
+             }
+             break
+         case 2:
+             if let value = structure[key] {
+                 if value > 1 {
+                     structure[key] = value - 1
+                 } else {
+                     structure[key] = nil
+                 }
+             }
+             break
+         case 3:
+             let values = Set(structure.values)
+             if values.contains(key) {
+                 output.append(1)
+             } else {
+                 output.append(0)
+             }
+             break
+         default:
+             break
+         }
+     }
+     return output
+ */
+
+
+/*
+ var output = [Int]()
+ var dict = [Int:Int]()
+
+ if queries.isEmpty {
+     return [0]
+ }
+
+ // Iterate
+ queries.forEach {
+     switch $0[0] {
+     case 1:
+         if let _ = dict.updateValue(1, forKey: $0[1]) {
+             dict[$0[1]]! += 1
+         }
+     case 2:
+         if let _ = dict.updateValue(1, forKey: $0[1]) {
+             dict[$0[1]]! -= 1
+         }
+     case 3:
+         output.append(dict.values.contains($0[1]) ? 1 : 0)
+     default:
+         break
+     }
+ }
+ return output
  */
