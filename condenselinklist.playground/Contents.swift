@@ -2,20 +2,8 @@ import UIKit
 /*
 Condense Linked List
  */
-
-// ******** LINKED LIST CLASS ********
-class Node<Int> {
-    var value: Int
-    var next: Node?
-    
-    init(value : Int, next: Node? = nil) {
-        self.value = value
-        self.next = next
-    }
-}
-
 // Create the linked list node structure.
-struct LinkedList<Int> {
+struct LinkedList<Element> {
     var head: Node<Int>?
     var tail:   Node<Int>?
 
@@ -30,17 +18,85 @@ struct LinkedList<Int> {
             tail = head
         }
     }
+    
+    init() { }
 }
 
+// ******** LINKED LIST CLASS ********
+class Node<Element> {
+    var value: Element
+    var next: Node?
+    
+    init(value : Element, next: Node? = nil) {
+        self.value = value
+        self.next = next
+    }
+}
+
+
+// ******** CUSTOM LINKED LIST PRINT FORMAT ******** //
+extension LinkedList: CustomStringConvertible {
+    var description: String {
+        guard let head = head else {
+            return "Empy List"
+        }
+        return String(describing: head)
+    }
+}
+
+// Create a linked list
+// 12->11->12->21->41->43->21
+
+var list = LinkedList<Int>()
+
+list.push(21)
+list.push(43)
+list.push(41)
+list.push(21)
+list.push(12)
+list.push(11)
+list.push(12)
+
+/*
+ Create the function that will remove duplicates:
+ 12->11->21->41->43
+ */
+
+func removeDuplicatesNode( head : Node<Int>?)  {
+    
+    guard let _ = head?.value else { return }
+    
+//    var values: Set<Int> = [headValue]
+    var values = Set<Int>()
+    var currNode = head
+
+    while let node = currNode {
+        if values.contains(node.value) {
+            print("The value \(node.value) is a duplicate")
+            currNode = node.next?.next
+        } else {
+            print("This value \(node.value) has to be added")
+            values.insert(node.value)
+            currNode = node.next
+        }
+       print(values)
+    }
+    
+//    print("list.head? = \(list.head?.value ?? -1) :: list.head?.next = \(list.head?.next?.value ?? -1)")
+}
+    
+removeDuplicatesNode(head: list.head)
 
 //func removeDuplicatesNode( head : Node<Int>?) -> Node<Int>?{
 //    var list = LinkedList<Int>()
 //
 //    var cur = head
-//    var prev : Node? = nil
+//    var prev : Node<Int>?
 //
 //    var listVals = Set<Int>()
 //
+//    if list.isEmpty { return head }
+
 //    while ( cur != nil ) {
 //
 //        let val:Int = cur!.data
