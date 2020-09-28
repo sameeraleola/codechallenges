@@ -44,10 +44,22 @@ extension LinkedList: CustomStringConvertible {
     }
 }
 
+// ******** CUSTOM NODE PRINT FORMAT ********.
+extension Node: CustomStringConvertible {
+    var description: String {
+        guard let next = next else {
+            return "\(value)"
+        }
+        
+        return "\(value) -> \(next)"
+    }
+}
+
 // Create a linked list
 // 12->11->12->21->41->43->21
 
 var list = LinkedList<Int>()
+var newList = LinkedList<Int>()
 
 list.push(21)
 list.push(43)
@@ -79,10 +91,10 @@ func removeDuplicatesNode( head : Node<Int>?)  {
             values.insert(node.value)
             currNode = node.next
         }
-       print(values)
     }
-    
-//    print("list.head? = \(list.head?.value ?? -1) :: list.head?.next = \(list.head?.next?.value ?? -1)")
+//    print(currNode?.value)
+    print(head?.value)
+    print("The new list = \(currNode)")
 }
     
 removeDuplicatesNode(head: list.head)
