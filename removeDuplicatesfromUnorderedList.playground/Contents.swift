@@ -4,75 +4,62 @@ import UIKit
  Remove duplicates from an unsorted linked list
  https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
  https://stackoverflow.com/questions/45136115/swift-linked-list-remove-duplicates
-
- public ListNode deleteDuplicates(ListNode head) {
-     Set<Integer> set = new HashSet<>();
-     ListNode pre = null;
-     ListNode fakeHead = head;
-     while(fakeHead != null){
-         if(!set.add(fakeHead.val)){
-             pre.next = fakeHead.next;
-         } else{
-             pre = fakeHead;
-         }
-         fakeHead = fakeHead.next;
-     }
-     return head;
- }
  */
 
-
 // Create a node class
-class Node<Element> {
-    var value : Element
-    var next : Node?
-    
-    init(value : Element, next : Node? = nil) {
-        self.value = value
+class ListNode {
+    var val : Int
+    var next : ListNode?
+
+    init(value : Int , next : ListNode? = nil) {
+        self.val = value
         self.next = next
     }
 }
 
-// Create a custom node print fomat
-extension Node : CustomStringConvertible {
-    var description : String {
-        guard let next = next else {
-            return "\(value)"
-        }
-        return "\(value) -> \(next)"
-    }
-}
-
-// Create a singly linked list structure
 struct LinkedList<Element> {
-    var head : Node<Element>?
-    var tail : Node<Element>?
-
-    // Linked list method to push values onto the singly linked list
-    mutating func push(_ value: Element) {
-        head = Node(value : value, next : head)
-    }
+    var head : ListNode?
+    var tail : ListNode?
 }
 
-// Create singly linked list methods to print the list
-extension LinkedList : CustomStringConvertible {
-    var description: String {
-        guard let head = head else {
-            return "Empty List"
+func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+    var values = Set<Int>()
+
+    var prev : ListNode? = nil
+    var currNode = head
+
+    while currNode != nil {
+        if (!values.insert(currNode!.val).inserted) {
+            prev?.next = currNode?.next
+        } else {
+            prev = currNode
         }
-        return String(describing: head)
+        currNode = currNode?.next
     }
-}
-
-// Create a singly linked list
-var list = LinkedList<Int>()
-
-// Populate the list singly linked list
-list.push(<#T##value: Int##Int#>)
-
-
-// Create a
-func  compressList(head : Node<Int>? ) -> Node<Int> {
     
     return head
 }
+
+//var values = Set<Int>()
+////print(values.insert(3))
+////print(values.insert(3))
+//print(values.insert(3).inserted)
+//print(values.insert(3).inserted)
+//print(values.insert(6).inserted)
+//print(values)
+
+
+//public ListNode deleteDuplicates(ListNode head) {
+//    Set<Integer> set = new HashSet<>();
+//    ListNode pre = null;
+//    ListNode fakeHead = head;
+//    while(fakeHead != null){
+//        if(!set.add(fakeHead.val)){
+//            pre.next = fakeHead.next;
+//        } else{
+//            pre = fakeHead;
+//        }
+//        fakeHead = fakeHead.next;
+//    }
+//    return head;
+//}
