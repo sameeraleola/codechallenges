@@ -7,6 +7,7 @@ def process_word(word: str, word_set: Set[str], min_pos, max_pos) -> str:
         if word[:i] in word_set:
             return word[:i]
     return word
+
 class Solution:
     def replaceWords(self, dictionary: List[str], sentence: str) -> str:
         word_set = set(dictionary)
@@ -16,6 +17,7 @@ class Solution:
         for i, word in enumerate(sentence_parsed):
             sentence_parsed[i] = process_word(word, word_set, min_len, max_len)
         return " ".join(sentence_parsed)
+    
 Andrew Candela  1 minute ago
 this is the fastest solution I could find on Leetcode:
 from collections import defaultdict
