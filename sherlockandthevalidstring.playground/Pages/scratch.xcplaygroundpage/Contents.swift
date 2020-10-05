@@ -31,6 +31,9 @@ import UIKit
  var charsDict : [Character : Int] = [:]
  
  Prepare:
+ Edge cases:
+ - One element return true
+ - Empty return false
  Iterate the string and put each character into a dictionary.
  Count each occurance of the character as the value.
  Use Dictionary(grouping: charsDict, by: { $0.charCount })
@@ -39,59 +42,33 @@ import UIKit
  If there is only one non-unique value and it is only +1 return true else return false.
  */
 //
-//let str1 = "aabbcd"
-let str1 = "aabbcccddd"
+let str1 = "aabbcd"
 let str2 = "aabbccddeefghi"
 let str3 = "abcdefghhgfedecba"
+let str4 = "aabbccdd"
+let str5 = "aabbccc"
 
 var charsDict : [Character : Int] = [:]
-var occurances = 0
 
-for c in str1 {
+for c in str3 {
     charsDict[c, default: 0] += 1
 }
 
-let uniqueValues: [Int] = [Int](charsDict.values)
-print(uniqueValues)
-//print(NSSet(uniqueValues: uniqueValues).count)
-//  let occurrenciesOfa = word.characters.filter { $0 == "a" }.count // 2
+let minValue = charsDict.values.min()
 
-//let uniqueValues = charsDict.values.filter
-let uniqueCounts = Dictionary(grouping: charsDict, by: { $0.value }).count//keys.count
-//if Dictionary(grouping: charsDict, by: { $0.value }).count == 1 {
-//    print("Sherlock has declared this a valid string ")
-//}
-//filter { $0.value.unique}
-print(uniqueCounts)
-//print(charsDict)
-for cnt in uniqueValues {
-    print(cnt)
+if charsDict.values.allSatisfy({$0 == minValue}) {
+    print(charsDict.values.allSatisfy({$0 == minValue}))
+    print("Yes")
+} else {
+    let numNotSatisfied = charsDict.values.filter { $0 > minValue! }.count
+    if numNotSatisfied == 1 {
+        let notSatisfiedDictValue = charsDict.values.filter { $0 > minValue! }
+        print(notSatisfiedDictValue.description)
+    } else {
+        print("No")
+    }
 }
 
-func countDistinct(numbers: [Int]) -> Int {
-    let array:Array<Int> = numbers
-    let count = NSSet(array: array).count
-    return count
-}
-
-print(countDistinct(numbers: [20, 10, 10, 30, 20]))
-
-
-
-
-//let occurrenciesOf3 = charsDict.values.filter { $0 == 3 }.count    //.filter { $0 == "a" }.count // 2
-
-//let reducedSubtitles = dict["subtitles"]!.reduce([[String: Any]]()) { (result, current) in
-//    if result.contains(where: { $0["language"] as? String == current["language"] as? String }) {
-//        return result
-//    }
-//
-//    return result + [current]
-//}
-
-
-//let uniqueCounts = Dictionary(grouping: charsDict, by: { $0.values }).count
-//let uniqueCounts = Dictionary(grouping: charsDict.keys, by: { $0.value }).count
 
 
 //: [Next](@next)
