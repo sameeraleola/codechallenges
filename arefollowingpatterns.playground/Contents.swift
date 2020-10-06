@@ -10,7 +10,7 @@ func are_following_patterns(strings: [String], patterns: [String]) -> Bool {
     // If the pattern and string are not the same size false
     if strings.count != patterns.count {
         // return false
-        return true
+        return false
     }
     
     // Parse the pattern
