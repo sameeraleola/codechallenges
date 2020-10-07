@@ -21,7 +21,8 @@ func are_following_patterns(strings: [String], patterns: [String]) -> Bool {
         }
         pattern = pattern + pp[w]!
     }
-    
+
+//     Look at the pattern
 //    print("pp = \(pp) :: pattern = \(pattern)")
     
     // Now the string
