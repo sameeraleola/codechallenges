@@ -1,5 +1,5 @@
 import UIKit
-// Find the source for this challenge
+// Code Signal : Are Following Patterns
 
 func are_following_patterns(strings: [String], patterns: [String]) -> Bool {
     var pp : [String : String] = [:]
