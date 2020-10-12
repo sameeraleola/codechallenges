@@ -43,8 +43,8 @@ func are_following_patterns(strings: [String], patterns: [String]) -> Bool {
 }
 
 //print(are_following_patterns(strings: ["cat", "dog", "dog"], patterns: ["a", "b", "b"]))
-//print(are_following_patterns(strings: ["cat", "dog", "doggy"], patterns: ["a", "b", "b"]))
-//print(are_following_patterns(strings: ["cat", "dog", "dog"], patterns: ["a", "b", "c"]))
+//print(are_following_patterns(strings: ["cat", "dog", "doggy"], patterns: ["a", "b", "c"]))
+//print(are_following_patterns(strings: ["cat", "dog", "dog"], patterns: ["a", "b", "b"]))
 //print(are_following_patterns(strings: ["aaa"], patterns: ["aaa"]))
 //print(are_following_patterns(strings: ["aaa", "aaa", "aaa"], patterns: ["aaa", "bbb", "aaa"]))
 print(are_following_patterns(strings: ["aaa", "aab", "aaa"], patterns: ["aaa", "aaa", "aaa"]))
