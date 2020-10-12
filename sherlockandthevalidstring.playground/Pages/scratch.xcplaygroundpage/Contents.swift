@@ -9,6 +9,14 @@ import UIKit
  Sherlock and the Valid String
  https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=7-day-campaign
  
+ A solution:
+ https://medium.com/@rohitpradhan/the-swift-solution-of-the-hacker-rank-problem-sherlock-and-the-valid-string-56dc01042750
+ This is one of the interesting problems in the on Hackerrank. I have invested some time in resolving this problem so I thought I would share with others. You can find the link here.
+ The problem is that a string is considered to be valid if all characters of the string appear the same number of times. It is also valid if he can remove just character at index in the string, and the remaining characters will occur the same number of times.
+ For example, if s = abc, it is a valid string because frequencies are {a:1, b:1, c:1}. So is s = abcc because we can remove one c and have 1 of each character in the remaining string. If s = abccc however, the string is not valid as we can only remove 1 occurrence of c. That would leave character frequencies of {a:1, b:1, c:2}.
+ */
+
+/*
  var word = "aabb"
 
  let numberOfChars = word.characters.count // 4
