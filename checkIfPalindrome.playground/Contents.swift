@@ -9,4 +9,4 @@ func isPalindrome(_ myString: String) -> Bool {
     }
 }
 
-print(isPalindrome("racecar"))
+print(isPalindrome("Millionaire"))
