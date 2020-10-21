@@ -6,11 +6,11 @@
 **Time Complexity:** O(n) 
 ***
 ### First Not Repeating
-**File Name:** first_not_repeating.playground 
+**File Name:** first_not_repeating.playground  
 **Language:** Swift  
 **Time Complexity:** O(n^2) 
 ***
 ### Merge Packages
-**File Name:** merge_packages.playground 
+**File Name:** merge_packages.playground  
 **Language:** Swift  
 **Time Complexity:** O(n^2) 
