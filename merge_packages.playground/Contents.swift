@@ -13,7 +13,7 @@ func merge_packages(items: [Int], limit: Int) -> [Int] {
         weights.append(0)
         return weights
     }
-    // 6 x O(n) =
+    // 4xO(n) x O(n) = O(n^2)
     for i in items { // O(n)
         let j = limit - i
         if items.contains(j)  { // O(n)
