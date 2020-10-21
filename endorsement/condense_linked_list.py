@@ -4,6 +4,8 @@
 #     self.value = x
 #     self.next = None
 
+# Use of dictionary is O(1) operations
+
 def condense_linked_list(node):
     curr = node # O(1)
     prev = None # O(1)
