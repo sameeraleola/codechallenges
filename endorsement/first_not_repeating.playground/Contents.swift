@@ -1,5 +1,7 @@
 import UIKit
 
+// First not repeating character
+
 func first_not_repeating_character(s: String) -> Character {
         for c in s { // O(n)
             if s.firstIndex(of: c) == s.lastIndex(of: c) {  // 2 O(n) = O(n)
