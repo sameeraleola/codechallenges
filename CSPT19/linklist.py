@@ -11,7 +11,6 @@ def createNode(l, value) -> ListNode:
         return new_node 
     
     
-    
     l.next = new_node
     
     # return l
